@@ -1,5 +1,5 @@
 {
-    "name": "nassaji/adobe-connect",
+    "name": "nassajis/adobe-connect",
     "description": "Provides a PHP Client to interact with the Adobe Connect's API",
     "keywords": ["Adobe","Connect","AdobeConnect","API","PHP"],
     "type": "library",
