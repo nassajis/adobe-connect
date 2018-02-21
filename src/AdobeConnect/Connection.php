@@ -130,6 +130,7 @@ class Connection
      */
     protected function setCookie($cookie)
     {
+		ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
         $this->cookie = trim(base64_encode(mcrypt_encrypt(
             MCRYPT_RIJNDAEL_256, '7e2d20j23a21db9f', $cookie, MCRYPT_MODE_ECB, $this->config->getSecret()
         )));
@@ -144,6 +145,7 @@ class Connection
      */
     protected function getCookie()
     {
+		ini_set('error_reporting', E_ALL & ~E_NOTICE & ~E_STRICT & ~E_DEPRECATED);
         if (! $this->cookie && isset($_COOKIE[$this->config->getCookieName()])) {
             $this->cookie = $_COOKIE[$this->config->getCookieName()];
         }
